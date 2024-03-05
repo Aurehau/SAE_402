@@ -1,16 +1,18 @@
 body{
     margin: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 
 .plateau_jeu{
     display: grid;
     grid-template-columns: auto;
+    position: fixed;
+    top: -620px;
 }
 
 .plateau_jeu>img , .plateau_jeu>canvas{
     height: 1368px;
     width: 1800px;
-    grid-area: 1/1;
+    grid-area: 0/0;
 }
