@@ -7,12 +7,12 @@ body{
 .plateau_jeu{
     display: grid;
     grid-template-columns: auto;
-    position: fixed;
-    top: -620px;
+    /* position: fixed;
+    transform: translateY(-620px); */
 }
 
 .plateau_jeu>img , .plateau_jeu>canvas{
     height: 1368px;
     width: 1800px;
-    grid-area: 0/0;
+    grid-area: 1/1/1/1;
 }
