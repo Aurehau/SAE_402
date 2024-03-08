@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    /*overflow: hidden;*/
+    /* overflow: hidden; */
 }
 
 
@@ -11,8 +11,23 @@ body{
     transform: translateY(-620px); */
 }
 
-.plateau_jeu>img , .plateau_jeu>canvas{
+.plateau_jeu>img {
     height: 1368px;
     width: 1800px;
     grid-area: 1/1/1/1;
+}
+
+.plateau_jeu>.corp{
+    height: fit-content;
+    width: fit-content;
+    grid-area: 1/1/1/1;
+}
+
+.corp>img{
+    height: 72px;
+    width: 72px;
+}
+
+.corp{
+    transform: translate(396px, 1296px);
 }
