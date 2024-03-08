@@ -27,16 +27,23 @@
         let MouseVX= (MouseX-rondX)*vitesse;
         let MouseVY=(MouseY-rondY)*vitesse;
 
-        if ((rondX+ MouseVX)>(72+30)&&(rondX+ MouseVX)<(1728-30)) {
+        let Xsuivant=rondX+ MouseVX;
+        let Ysuivant=rondY+ MouseVY;
+
+        if (((Xsuivant)>(72+30)&&(Xsuivant)<(1728-30))&&(((Ysuivant)>(1296-25))&&((Xsuivant)>(360+25))&&((Xsuivant)<(504-25)))) {
             rondX+= MouseVX;
         }
 
-        if (((rondY+ MouseVY)>(72+25))&&((rondY+ MouseVY)<(1296-25))) {
+        if (((Ysuivant)>(72+25))&&((Ysuivant)<(1296-25))) {
             rondY+= MouseVY;
         }
 
-        if (((rondY+ MouseVY)>(1296-25))&&((rondX+ MouseVX)>(360-30))) {
+        if (((Ysuivant)>(1296-25))&&((Xsuivant)>(360+30))&&((Xsuivant)<(504-30))) {
             rondY+= MouseVY;
+        }
+
+        if (((Ysuivant)>(1224-25))&&(((Xsuivant)>(298+20))&&((Xsuivant)<(576-30))||((Xsuivant)<(216-25)))) {
+            rondX+= MouseVX;
         }
     
         //rondX+= MouseVX;
