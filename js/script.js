@@ -1,12 +1,15 @@
-  let MouseX=396;
-  let MouseY=1296;
+  let MouseX=432;
+  let MouseY=1325;
   
   let vitesse=0.05;
   
   let perso=document.querySelector(".corp");
+
+  let translationX = 100dvh - 1368px;
+  let translationY = 100dvh - 1368px;
   
-  let rondX=396;
-  let rondY=1296;
+  let rondX=432;
+  let rondY=1326;
   
   //window.requestAnimationFrame(deplacementPerso);
   deplacementPerso();
@@ -30,291 +33,11 @@
         let Xpresent=rondX;
         let Ypresent=rondY;
 
+        let translationX = ;
+        let translationY = ;
+
         bougerY(Xpresent,Ysuivant,MouseVY);
         bougerX(Xsuivant,Ypresent,MouseVX);
-
-/*         if ((Xsuivant>(72+30))&& (Xsuivant<(1728-30))&&((Ysuivant>(1296-25))&&(Xsuivant>(360+30))&&(Xsuivant<(504-30)))) {
-            rondX+= MouseVX;
-        } */
-
-       /*  if ((Ysuivant>(72+25))&&(Ysuivant<(1296-25))) {
-            rondY+= MouseVY;
-        }
- */
-       /*  if ((Ysuivant>(1296-25))&&(Xsuivant>(360+25))&&(Xsuivant<(504-25))) {
-            rondY+= MouseVY;
-        }
-
-
-        //2ème ligne
-
-        if (((1296)>Ysuivant)&&(Ysuivant>(1224))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(288+30))&&(Xsuivant<(576-30)))||((Xsuivant>(648+30))&&(Xsuivant<(864-30)))||((Xsuivant>(936+30))&&(Xsuivant<(1152-30)))||((Xsuivant>(1224+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //3
-        if (((1224)>Ysuivant)&&(Ysuivant>(1152))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(288+30))&&(Xsuivant<(1152-30)))||((Xsuivant>(1224+30))&&(Xsuivant<(1296-30)))||((Xsuivant>(1368+30))&&(Xsuivant<(1512-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //4
-        if (((1152)>Ysuivant)&&(Ysuivant>(1080))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(360+30))&&(Xsuivant<(576-30)))||((Xsuivant>(648+30))&&(Xsuivant<(864-30)))||((Xsuivant>(1008+30))&&(Xsuivant<(1296-30)))||((Xsuivant>(1368+30))&&(Xsuivant<(1512-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //5
-        if (((1080)>Ysuivant)&&(Ysuivant>(1008))&&((Xsuivant>(72+30)&&(Xsuivant<(576-30))||((Xsuivant>(936+30))&&(Xsuivant<(1152-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30)))))) {
-            rondX+= MouseVX;
-        } 
-        //6
-        if (((1008)>Ysuivant)&&(Ysuivant>(936))&&((Xsuivant>(72+30)&&(Xsuivant<(144-30)))||((Xsuivant>(648+30))&&(Xsuivant<(1224-30)))||((Xsuivant>(1296+30))&&(Xsuivant<(1512-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //7
-        if (((936)>Ysuivant)&&(Ysuivant>(864))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(288+30))&&(Xsuivant<(576-30)))||((Xsuivant>(648+30))&&(Xsuivant<(864-30)))||((Xsuivant>(1296+30))&&(Xsuivant<(1512-30))))) {
-            rondX+= MouseVX;
-        } 
-        //8
-        if (((864)>Ysuivant)&&(Ysuivant>(792))&&((Xsuivant>(72+30)&&(Xsuivant<(576-30))||((Xsuivant>(936+30))&&(Xsuivant<(1728-30)))))) {
-            rondX+= MouseVX;
-        }
-        //9
-        if (((792)>Ysuivant)&&(Ysuivant>(720))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(288+30))&&(Xsuivant<(1080-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //10
-        if (((720)>Ysuivant)&&(Ysuivant>(648))&&((Xsuivant>(72+30)&&(Xsuivant<(144-30)))||((Xsuivant>(648+30))&&(Xsuivant<(864-30)))||((Xsuivant>(936+30))&&(Xsuivant<(1008-30)))||((Xsuivant>(1080+30))&&(Xsuivant<(1512-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //11
-        if (((648)>Ysuivant)&&(Ysuivant>(576))&&((Xsuivant>(72+30)&&(Xsuivant<(864-30)))||((Xsuivant>(1296+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //12
-        if (((576)>Ysuivant)&&(Ysuivant>(504))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(432+30))&&(Xsuivant<(504-30)))||((Xsuivant>(936+30))&&(Xsuivant<(1224-30)))||((Xsuivant>(1368+30))&&(Xsuivant<(1440-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //13
-        if (((504)>Ysuivant)&&(Ysuivant>(432))&&((Xsuivant>(72+30)&&(Xsuivant<(288-30)))||((Xsuivant>(360+30))&&(Xsuivant<(504-30)))||((Xsuivant>(576+30))&&(Xsuivant<(864-30)))||((Xsuivant>(1008+30))&&(Xsuivant<(1080-30)))||((Xsuivant>(1296+30))&&(Xsuivant<(1512-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //14
-        if (((432)>Ysuivant)&&(Ysuivant>(360))&&((Xsuivant>(72+30)&&(Xsuivant<(288-30)))||((Xsuivant>(360+30))&&(Xsuivant<(504-30)))||((Xsuivant>(576+30))&&(Xsuivant<(648-30)))||((Xsuivant>(720+30))&&(Xsuivant<(1224-30)))||((Xsuivant>(1440+30))&&(Xsuivant<(1512-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        }
-        //15
-        if (((360)>Ysuivant)&&(Ysuivant>(288))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(576+30))&&(Xsuivant<(648-30)))||((Xsuivant>(1080+30))&&(Xsuivant<(1224-30)))||((Xsuivant>(1296+30))&&(Xsuivant<(1512-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //16
-        if (((288)>Ysuivant)&&(Ysuivant>(216))&&((Xsuivant>(288+30)&&(Xsuivant<(432-30)))||((Xsuivant>(504+30))&&(Xsuivant<(1008-30)))||((Xsuivant>(1080+30))&&(Xsuivant<(1224-30)))||((Xsuivant>(1296+30))&&(Xsuivant<(1368-30)))||((Xsuivant>(1584+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //17
-        if (((216)>Ysuivant)&&(Ysuivant>(144))&&((Xsuivant>(72+30)&&(Xsuivant<(432-30)))||((Xsuivant>(936+30))&&(Xsuivant<(1008-30)))||((Xsuivant>(1080+30))&&(Xsuivant<(1368-30)))||((Xsuivant>(1440+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-        //18
-        if (((144)>Ysuivant)&&(Ysuivant>(72))&&((Xsuivant>(72+30)&&(Xsuivant<(216-30)))||((Xsuivant>(288+30))&&(Xsuivant<(1008-30)))||((Xsuivant>(1080+30))&&(Xsuivant<(1728-30))))) {
-            rondX+= MouseVX;
-        } 
-
-
-
-        //axe Y
-
-        //1
-
-        if (((144-30)>Xsuivant)&&(Xsuivant>(72))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||((Ysuivant>(288+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        } 
-
-        if (((144)>Xsuivant)&&(Xsuivant>(144-30))&&((Ysuivant>(72+0)&&(Ysuivant<(216-0)))||((Ysuivant>(288+0))&&(Ysuivant<(1296-0))))) {
-            rondY+= MouseVY;
-        } 
-        //2
-        if (((216)>Xsuivant)&&(Xsuivant>(144))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||((Ysuivant>(288+30))&&(Ysuivant<(648-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        } 
-        //3
-        if (((288)>Xsuivant)&&(Xsuivant>(216))&&((Ysuivant>(144+30)&&(Ysuivant<(216-30)))||((Ysuivant>(360+30))&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(648-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1080-30))))) {
-            rondY+= MouseVY;
-        } 
-        //4
-        if (((360)>Xsuivant)&&(Xsuivant>(288))&&((Ysuivant>(72+30)&&(Ysuivant<(288-30)))||((Ysuivant>(576+30))&&(Ysuivant<(648-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1080-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        } 
-        //5
-        if (((432)>Xsuivant)&&(Xsuivant>(360))&&((Ysuivant>(72+30)&&(Ysuivant<(288-30)))||((Ysuivant>(360+30))&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||(Ysuivant>(1008+30)))) {
-            rondY+= MouseVY;
-        } 
-        //6
-        if (((504)>Xsuivant)&&(Xsuivant>(432))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||((Ysuivant>(360+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||(Ysuivant>(1008+30)))) {
-            rondY+= MouseVY;
-        }
-        //7
-        if (((576)>Xsuivant)&&(Xsuivant>(504))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||((Ysuivant>(576+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //8
-        if (((648)>Xsuivant)&&(Xsuivant>(576))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(792-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1224-30))))) {
-            rondY+= MouseVY;
-        }
-        //9
-        if (((720)>Xsuivant)&&(Xsuivant>(648))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(432+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(792-30)))||((Ysuivant>(864+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //10
-        if (((792)>Xsuivant)&&(Xsuivant>(720))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(792-30)))||((Ysuivant>(864+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //11
-        if (((864)>Xsuivant)&&(Xsuivant>(792))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(792-30)))||((Ysuivant>(864+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //12
-        if (((936)>Xsuivant)&&(Xsuivant>(864))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(432-30)))||((Ysuivant>(720+30))&&(Ysuivant<(792-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1224-30))))) {
-            rondY+= MouseVY;
-        }
-        //13
-        if (((1008)>Xsuivant)&&(Xsuivant>(936))&&((Ysuivant>(72+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(432-30)))||(Ysuivant>(504+30)&&(Ysuivant<(576-30)))||((Ysuivant>(648+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1080-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //14
-        if (((1080)>Xsuivant)&&(Xsuivant>(1008))&&((Ysuivant>(360+30)&&(Ysuivant<(576-30)))||((Ysuivant>(720+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //15
-        if (((1152)>Xsuivant)&&(Xsuivant>(1080))&&((Ysuivant>(72+30)&&(Ysuivant<(432-30)))||(Ysuivant>(504+30)&&(Ysuivant<(576-30)))||((Ysuivant>(648+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //16
-        if (((1224)>Xsuivant)&&(Xsuivant>(1152))&&((Ysuivant>(72+30)&&(Ysuivant<(432-30)))||(Ysuivant>(504+30)&&(Ysuivant<(576-30)))||((Ysuivant>(648+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1152-30))))) {
-            rondY+= MouseVY;
-        }
-        //17
-        if (((1296)>Xsuivant)&&(Xsuivant>(1224))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||(Ysuivant>(648+30)&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //18
-        if (((1368)>Xsuivant)&&(Xsuivant>(1296))&&((Ysuivant>(72+30)&&(Ysuivant<(360-30)))||(Ysuivant>(432+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1224+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //19
-        if (((1440)>Xsuivant)&&(Xsuivant>(1368))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(288+30)&&(Ysuivant<(360-30)))||((Ysuivant>(432+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //20
-        if (((1512)>Xsuivant)&&(Xsuivant>(1440))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||(Ysuivant>(288+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //21
-        if (((1584)>Xsuivant)&&(Xsuivant>(1512))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||(Ysuivant>(576+30)&&(Ysuivant<(648-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(1224+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //22
-        if (((1656)>Xsuivant)&&(Xsuivant>(1584))&&((Ysuivant>(72+30)&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        }
-        //23
-        if (((1728)>Xsuivant)&&(Xsuivant>(1656))&&((Ysuivant>(72+30)&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-            rondY+= MouseVY;
-        } */
-
-/* 
-        //coin axe Y
-
-                //1
-
-                if (((144)>Xsuivant)&&(Xsuivant>(72))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||((Ysuivant>(288+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                } 
-                //2
-                if (((216)>Xsuivant)&&(Xsuivant>(144))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||((Ysuivant>(288+30))&&(Ysuivant<(648-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                } 
-                //3
-                if (((288)>Xsuivant)&&(Xsuivant>(216))&&((Ysuivant>(144+30)&&(Ysuivant<(216-30)))||((Ysuivant>(360+30))&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(648-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1080-30))))) {
-                    rondY+= MouseVY;
-                } 
-                //4
-                if (((360)>Xsuivant)&&(Xsuivant>(288))&&((Ysuivant>(72+30)&&(Ysuivant<(288-30)))||((Ysuivant>(576+30))&&(Ysuivant<(648-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1080-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                } 
-                //5
-                if (((432)>Xsuivant)&&(Xsuivant>(360))&&((Ysuivant>(72+30)&&(Ysuivant<(288-30)))||((Ysuivant>(360+30))&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||(Ysuivant>(1008+30)))) {
-                    rondY+= MouseVY;
-                } 
-                //6
-                if (((504)>Xsuivant)&&(Xsuivant>(432))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||((Ysuivant>(360+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||(Ysuivant>(1008+30)))) {
-                    rondY+= MouseVY;
-                }
-                //7
-                if (((576)>Xsuivant)&&(Xsuivant>(504))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||((Ysuivant>(576+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(936-30)))||((Ysuivant>(1008+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //8
-                if (((648)>Xsuivant)&&(Xsuivant>(576))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(642-30)))||((Ysuivant>(720+30))&&(Ysuivant<(792-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1224-30))))) {
-                    rondY+= MouseVY;
-                }
-                //9
-                if (((720)>Xsuivant)&&(Xsuivant>(648))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(432+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(792-30)))||((Ysuivant>(864+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //10
-                if (((792)>Xsuivant)&&(Xsuivant>(720))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(792-30)))||((Ysuivant>(864+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //11
-                if (((864)>Xsuivant)&&(Xsuivant>(792))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(792-30)))||((Ysuivant>(864+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //12
-                if (((936)>Xsuivant)&&(Xsuivant>(864))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(216+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(432-30)))||((Ysuivant>(720+30))&&(Ysuivant<(792-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1224-30))))) {
-                    rondY+= MouseVY;
-                }
-                //13
-                if (((1008)>Xsuivant)&&(Xsuivant>(936))&&((Ysuivant>(72+30)&&(Ysuivant<(288-30)))||(Ysuivant>(360+30)&&(Ysuivant<(432-30)))||(Ysuivant>(504+30)&&(Ysuivant<(576-30)))||((Ysuivant>(648+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1080-30)))||((Ysuivant>(1152+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //14
-                if (((1080)>Xsuivant)&&(Xsuivant>(1008))&&((Ysuivant>(360+30)&&(Ysuivant<(576-30)))||((Ysuivant>(720+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //15
-                if (((1152)>Xsuivant)&&(Xsuivant>(1080))&&((Ysuivant>(72+30)&&(Ysuivant<(432-30)))||(Ysuivant>(504+30)&&(Ysuivant<(576-30)))||((Ysuivant>(648+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //16
-                if (((1224)>Xsuivant)&&(Xsuivant>(1152))&&((Ysuivant>(72+30)&&(Ysuivant<(432-30)))||(Ysuivant>(504+30)&&(Ysuivant<(576-30)))||((Ysuivant>(648+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1152-30))))) {
-                    rondY+= MouseVY;
-                }
-                //17
-                if (((1296)>Xsuivant)&&(Xsuivant>(1224))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||(Ysuivant>(648+30)&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //18
-                if (((1368)>Xsuivant)&&(Xsuivant>(1296))&&((Ysuivant>(72+30)&&(Ysuivant<(360-30)))||(Ysuivant>(432+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1224+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //19
-                if (((1440)>Xsuivant)&&(Xsuivant>(1368))&&((Ysuivant>(72+30)&&(Ysuivant<(144-30)))||(Ysuivant>(288+30)&&(Ysuivant<(360-30)))||((Ysuivant>(432+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //20
-                if (((1512)>Xsuivant)&&(Xsuivant>(1440))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||(Ysuivant>(288+30)&&(Ysuivant<(504-30)))||((Ysuivant>(576+30))&&(Ysuivant<(720-30)))||((Ysuivant>(792+30))&&(Ysuivant<(1008-30)))||((Ysuivant>(1080+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //21
-                if (((1584)>Xsuivant)&&(Xsuivant>(1512))&&((Ysuivant>(72+30)&&(Ysuivant<(216-30)))||(Ysuivant>(576+30)&&(Ysuivant<(648-30)))||((Ysuivant>(792+30))&&(Ysuivant<(864-30)))||((Ysuivant>(1224+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //22
-                if (((1656)>Xsuivant)&&(Xsuivant>(1584))&&((Ysuivant>(72+30)&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                }
-                //23
-                if (((1728)>Xsuivant)&&(Xsuivant>(1656))&&((Ysuivant>(72+30)&&(Ysuivant<(864-30)))||((Ysuivant>(936+30))&&(Ysuivant<(1296-30))))) {
-                    rondY+= MouseVY;
-                } */
-                
 
         //rondX+= MouseVX;
         //rondY+= MouseVY;
@@ -324,6 +47,7 @@
         var angleDegrees = (angleRadians * 180) / Math.PI;
     
         perso.style.transform=`translate(${rondX-36}px, ${rondY-36}px) rotate(${90+angleDegrees}deg)`;
+
 
 
         //nouvel appel de la fonction
@@ -455,7 +179,11 @@ function bougerY(variableX,variableY,MouseVY){
                     rondY+= MouseVY;
                 }
 
-                if ( (966<variableX)&&(variableX<1060)&&(750<variableY)&&(variableY<834)) {
+                if ( (966<variableX)&&(variableX<1060)&&(750<variableY)&&(variableY<834)) {  
+                    rondY+= MouseVY;
+                }
+
+                if ( (966<variableX)&&(variableX<978)&&(676<variableY)&&(variableY<=750)) {  
                     rondY+= MouseVY;
                 }
 
@@ -690,6 +418,10 @@ function bougerX(variableX,variableY,MouseVX){
         }
 
         if ( (966<variableX)&&(variableX<1060)&&(750<variableY)&&(variableY<834)) {
+            rondX+= MouseVX;
+        }
+
+        if ( (966<variableX)&&(variableX<978)&&(676<variableY)&&(variableY<=750)) {  
             rondX+= MouseVX;
         }
 

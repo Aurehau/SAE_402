@@ -1,18 +1,18 @@
 body{
     margin: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 
 .plateau_jeu{
     display: grid;
     grid-template-columns: auto;
-    /* position: fixed;
-    transform: translateY(-620px); */
+    position: fixed;
+    transform: translateY(calc(100dvh - 1368px)) translateX( calc((100dvw * 0.5) - 432px));
 }
 
 .plateau_jeu>img {
-    height: 1368px;
+    height: 1368px;  /* 200               2000  */
     width: 1800px;
     grid-area: 1/1/1/1;
 }
@@ -29,5 +29,19 @@ body{
 }
 
 .corp{
-    transform: translate(396px, 1296px);
+    transform: translate(432px, 1296px) ;
+}
+
+
+
+
+
+@media screen and (min-width: 850px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    .plateau_jeu{
+        display: grid;
+        grid-template-columns: auto;
+        position: fixed;
+        transform: translateY(calc(100dvh - 1368px)) translateX(0px);
+    }
 }
