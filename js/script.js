@@ -1,12 +1,34 @@
-  let MouseX=432;
-  let MouseY=1325;
-  
-  let vitesse=0.05;
-  
-  let perso=document.querySelector(".corp");
+let MouseX=432;
+let MouseY=1325;
 
-  let translationX = 100dvh - 1368px;
-  let translationY = 100dvh - 1368px;
+let vitesse=0.05;
+
+let perso=document.querySelector(".corp");
+let plateau=document.querySelector(".plateau_jeu");
+
+let translationY = window.innerHeight - 1368;
+let translationX = 0;
+
+if (window.innerWidth<850) {
+    translationX = (window.innerWidth * 0.5) - 432;
+}
+
+let maxtranslate = window.innerWidth- 1800;
+let maxtranslateY = translationY;
+
+window.addEventListener("resize",()=> {
+    translationY = window.innerHeight - 1368;
+    translationX = 0;
+    if (window.innerWidth<850) {
+      translationX = (window.innerWidth * 0.5) - 432;
+    }
+
+    maxtranslate = window.innerWidth- 1800;
+    maxtranslateY = translationY;
+    console.log(translationX, translationY);
+});
+
+  console.log(translationX, translationY);
   
   let rondX=432;
   let rondY=1326;
@@ -18,8 +40,8 @@
   
   
   function positionMouse(event){
-      MouseX= event.pageX;
-      MouseY= event.pageY;
+      MouseX= event.pageX - translationX;
+      MouseY= event.pageY - translationY;
   }
   
   function deplacementPerso(){
@@ -33,8 +55,8 @@
         let Xpresent=rondX;
         let Ypresent=rondY;
 
-        let translationX = ;
-        let translationY = ;
+        /* let translationX = ;
+        let translationY = ; */
 
         bougerY(Xpresent,Ysuivant,MouseVY);
         bougerX(Xsuivant,Ypresent,MouseVX);
@@ -46,6 +68,49 @@
         var angleRadians = Math.atan2(MouseY - rondY, MouseX - rondX);
         var angleDegrees = (angleRadians * 180) / Math.PI;
     
+        if(rondX+translationX>(window.innerWidth-150)){
+            if (translationX>maxtranslate){
+            translationX -= MouseVX;
+            }
+        }
+        if((rondX+translationX)<150){
+            if (translationX<0){
+            translationX -= MouseVX;
+            }
+        }
+// probleme ****************************************
+        if(rondY+translationY>(window.innerHeight-150)){
+            if (translationY>maxtranslateY){
+                translationY -= MouseVY;
+            }
+        }
+// *************************************************
+        if((rondY+translationY)<150){
+            if (translationY<0){
+                translationY -= MouseVY;
+            }
+        }
+
+        if(translationX>0){
+            translationX = 0;
+        }
+
+        if(translationX<maxtranslate){
+            translationX = maxtranslate;
+        }
+
+        if(translationY>0){
+            translationY = 0;
+        }
+
+        if(translationY<maxtranslateY){
+            translationY = maxtranslateY;
+        }
+
+        plateau.style.transform=`translateX(${translationX }px) translateY(${translationY }px)`;
+
+        /* plateau.style.transform=`translate(${rondX-36}px, ${rondY-36}px)`; */
+        
         perso.style.transform=`translate(${rondX-36}px, ${rondY-36}px) rotate(${90+angleDegrees}deg)`;
 
 
