@@ -15,6 +15,7 @@ body{
     height: 1368px;  /* 200               2000  */
     width: 1800px;
     grid-area: 1/1/1/1;
+    transition: 1s;
 }
 
 .plateau_jeu>.corp{
@@ -26,6 +27,7 @@ body{
 .corp>img{
     height: 72px;
     width: 72px;
+    transition: 1s;
 }
 
 .corp{

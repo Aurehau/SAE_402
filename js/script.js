@@ -43,6 +43,17 @@ window.addEventListener("resize",()=> {
       MouseX= event.pageX - translationX;
       MouseY= event.pageY - translationY;
   }
+
+  document.addEventListener('touchmove',positionDoigt);
+
+  function positionDoigt(event){
+    event.preventDefault();
+
+    var touch = event.touches[0];
+
+    MouseX= touch.clientX - translationX;
+    MouseY= touch.clientY - translationY;
+}
   
   function deplacementPerso(){
 
@@ -57,9 +68,17 @@ window.addEventListener("resize",()=> {
 
         /* let translationX = ;
         let translationY = ; */
+        //InPieceCoffre(Xpresent,Ypresent);
 
-        bougerY(Xpresent,Ysuivant,MouseVY);
-        bougerX(Xsuivant,Ypresent,MouseVX);
+        if((Xpresent<=186)&&(Ypresent<=186)){
+            document.querySelector(".plateau_jeu>img").style.transform=`translateX(900px) translateY(650px) scale(2)`;
+            document.querySelector(".plateau_jeu>.corp>img").style.transform=`translateX(100px) translateY(100px) scale(2)`;
+            setTimeout(pagesuivante, 800);
+            
+        }else{
+            bougerY(Xpresent,Ysuivant,MouseVY);
+            bougerX(Xsuivant,Ypresent,MouseVX);
+        }
 
         //rondX+= MouseVX;
         //rondY+= MouseVY;
@@ -122,6 +141,10 @@ window.addEventListener("resize",()=> {
 
       
   }
+
+function pagesuivante(){
+    document.location.href="../page.html";
+}
 
 function bougerY(variableX,variableY,MouseVY){
             // ***** Nouvelle formule *****************************************************************************
@@ -596,6 +619,13 @@ function bougerX(variableX,variableY,MouseVX){
         if ( (1266<=variableX)&&(variableX<=1398)&&(1254<variableY)&&(variableY<1266)) {
             rondX+= MouseVX;
         }
+}
+
+function InPieceCoffre(Xpresent,Ypresent){
+    if((Xpresent<=186)&&(Ypresent<=186)){
+        document.querySelector(".plateau_jeu>img").style.transform=`translateX(900px) translateY(650px) scale(2)`;
+        //document.location.href="../page.html";
+    }
 }
 
   
