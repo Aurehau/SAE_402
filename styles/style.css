@@ -50,8 +50,18 @@ body{
     font-size: 14px;
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: weight;
     font-style: normal;
+    position:relative;
+    z-index: 90;
+}
+
+.bull>img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-35px, 25px);
+    z-index: -1;
 }
 
 
