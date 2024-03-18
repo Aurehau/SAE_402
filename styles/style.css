@@ -108,6 +108,70 @@ header{
 
 
 
+/****************Personage*guide************************************************************************************/
+
+.guide{
+    position: relative;
+    width: fit-content;
+    height:59.3dvw;
+    max-height: 80dvh !important;
+    margin: 0 auto 0 auto;
+}
+
+.guide>svg{
+    width:90dvw;
+    /* height:59.3dvw; */
+    max-width: 600px;
+    max-height: 80dvh !important;
+    justify-self: center;
+}
+
+.oeilG, .oeilD{
+    position: absolute;
+    height: 7.3dvw; /*23px*/
+    width: 5.4dvw; /*17px*/
+    max-width: 36px;
+    max-height: 49px;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, black 0%,black 100%,rgba(0, 0, 0, 0) 100%);
+    border-radius: 50%;
+    animation: yeuxcligne 3s ease-in-out infinite alternate;
+    fill: none;
+    margin: -47% 50%;
+    transform: translate(-50%);
+}
+
+.oeilG{
+    transform: translate(-190%);
+}
+.oeilD{
+    transform: translate(40%);
+}
+
+.mainG, .mainD{
+    animation: mainflotte 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes mainflotte {
+    from {
+      transform: translate(0%,-5%);
+    }
+    to {
+        transform: translate(0%,0%);
+    }
+  }
+
+  @keyframes yeuxcligne {
+    from {
+        background: linear-gradient(rgba(0, 0, 0, 0) 0%, black 0%,black 100%,rgba(0, 0, 0, 0) 100%);
+
+    }
+    to {
+        background: linear-gradient(rgba(0, 0, 0, 0) 50%, black 50%,black 50%,rgba(0, 0, 0, 0) 50%);
+    }
+  }
+
+
+
 @media screen and (min-width: 850px) {
     /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
     .plateau_jeu{
