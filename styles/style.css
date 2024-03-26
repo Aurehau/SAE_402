@@ -2,6 +2,8 @@
     --Blanc: rgb(255, 255, 255);
     --Bleu: #7BC1B5;
     --Rouge: #D63030;
+    --Violet: #FF00EAFF;
+    --Orange: #FF8300FF;
   }
 
 body{
@@ -12,6 +14,41 @@ body{
     flex-direction: column;
     min-height: 100dvh;
 }
+
+.voyage{
+    align-items: center;
+    position: relative;
+}
+
+.voyagefond{
+    position: fixed;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(from 0deg at 50% 50%, var(--Violet) 0%, var(--Orange) 13%, var(--Violet) 26%, var(--Orange) 40%, var(--Violet) 52%, var(--Orange) 64%, var(--Violet) 76%, var(--Orange) 88%, var(--Violet) 99%);
+    animation: voyage 4s linear infinite;
+    transition:1s;
+    transform: scale(0.1);
+    height: calc(100dvh + 100dvw);
+    width: calc(100dvh + 100dvw);
+    margin-top: -50%;
+    z-index: -2;
+}
+
+@keyframes voyage {
+    0% {
+        transform: rotate(0deg) skew(10deg, 5deg);
+        filter: blur(20px);
+    }
+    50% {
+        filter: blur(5px);
+        transform: rotate(180deg) skew(30deg, 0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) skew(10deg, 5deg);
+        filter: blur(20px);
+    }
+  }
 
 
 /********************labirinthe*****************************************/
