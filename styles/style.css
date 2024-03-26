@@ -44,6 +44,13 @@ body{
 }
 
 /***********************************************************************/
+.enssemble_bull{
+    width: fit-content;
+    max-width: 90dvw;
+    height: max-content;
+    position: relative;
+    margin: 0px auto 0px auto;
+}
 
 .bull{
     background-color:var(--Blanc);
@@ -58,8 +65,7 @@ body{
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    position:relative;
-    z-index: 2;
+    z-index: 9;
     margin: 0px auto 0px auto;
 }
 
@@ -67,12 +73,13 @@ body{
 	visibility:hidden;
 }
 
-.bull>img{
+.enssemble_bull>img{
+    width: 35px;
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translate(-35px, 25px);
-    z-index: 1;
+    transform: translate(-35px, 27px);
+    z-index: -1;
 }
 
 header{
@@ -90,9 +97,68 @@ header{
     margin: 20px 20px 0px auto;
 }
 
+.pop-up{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#000000da,#0b2f35da);
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+    opacity: 0;
+}
 
-.footer{
+.pop-existe{
+    display: flex;
+    animation: pop-visible 0.5s ease-in-out forwards ;
+}
 
+@keyframes pop-visible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+.pop-up>div{
+    margin: auto;
+    max-width: 70dvw;
+    opacity: 0;
+}
+
+.pop-it{
+    animation: pop-it 0.5s ease-in-out forwards;
+}
+
+@keyframes pop-it {
+    0% {
+        border-radius: 100px;
+        transform: scale(0.4);
+        opacity: 0;
+    }
+
+    60% {
+        border-radius: 8px;
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
+  .croix{
+
+  }
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 5dvw;
 }
 
 .bouton{
@@ -104,10 +170,14 @@ header{
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.226), inset 0px -1px 5.8px #404040f9;
     border: none;
-    margin: 20px 20px 0px auto;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     display: flex;
+    gap: 10px;
+}
+
+.reverse{
+    transform: scale(-1);
 }
 
 
@@ -188,7 +258,7 @@ header{
     max-height: 120px;
     margin: 29% -50%;
     transform: translate(-50%);
-    animation: parle1 10s ease-in-out infinite alternate;
+    animation: parle1 8s ease-in-out infinite alternate;
 }
 
   @keyframes parle1 {
@@ -213,5 +283,9 @@ header{
         grid-template-columns: auto;
         position: fixed;
         transform: translateY(calc(100dvh - 1368px)) translateX(0px);
+    }
+
+    .bull{
+        max-width: 800px;
     }
 }
