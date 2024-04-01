@@ -329,7 +329,25 @@ main{
 }
 
 .mainG, .mainD{
+    position: absolute;
     animation: mainflotte 1.5s ease-in-out infinite alternate;
+    height: 20dvw; /*23px*/
+    width: 15dvw; /*17px*/
+    max-width: 86px;
+    max-height: 203px;
+    bottom: -10%;
+}
+
+.mainG{
+    left: 19%;
+}
+
+.mainD{
+    right: 21%;
+}
+
+.Msalut{
+    animation: mainsalut 0.2s ease-in-out infinite alternate;
 }
 
 @keyframes mainflotte {
@@ -341,9 +359,19 @@ main{
     }
   }
 
+  @keyframes mainsalut {
+    from {
+      transform: translate(-30%,-40%) rotate(-50deg) ;
+    }
+
+    to {
+        transform: translate(50%,-45%) rotate(30deg) ;
+    }
+  }
+
   @keyframes yeuxcligne {
     0%, 22%, 22.5%, 45%, 45.5%,65%, 65.5%, 90%, 90.5%, 91% , 100% {
-        transform: scale(100%,100%);
+        transform: scale(100%,105%);
     }
     22.3%, 45.3%, 65.3%, 90.3%, 90.7% {
         transform: scale(100%,0%);
@@ -375,6 +403,14 @@ main{
   }
 
 
+
+
+
+
+
+
+
+
 @media screen and (min-width: 600px) {
     .moustache{
         margin: 29% -50%;
@@ -392,5 +428,9 @@ main{
 
     .bull{
         max-width: 800px;
+    }
+
+    .mainG, .mainD{
+        bottom: -20%;
     }
 }
