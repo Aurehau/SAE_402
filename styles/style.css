@@ -378,6 +378,71 @@ main{
     }
   }
 
+  .oeilG>.joietriste{
+    --oeiltriste:-30deg;
+    animation: yeuxjoietriste 40s ease-in-out infinite;
+  }
+
+  .oeilD>.joietriste{
+    --oeiltriste:30deg;
+    animation: yeuxjoietriste 40s ease-in-out infinite;
+  }
+
+  @keyframes yeuxjoietriste {
+    0%, 22%, 22.5%, 66%, 90%, 90.5%, 91% , 100% {
+        transform: scale(100%,105%);
+    }
+    22.3%, 90.3%, 90.7%{
+        transform: scale(100%,0%);
+    }
+
+    25%{
+        transform: rotate(var(--oeiltriste)) scale(200%,90%) translate(0%, 10%);
+        border-radius: 50% 50% 0px 0px;
+    }
+
+    45%, 45.5%,65%, 65.5% {
+        transform: rotate(var(--oeiltriste)) scale(200%,90%) translate(0%, 10%);
+        border-radius: 50% 50% 0px 0px;
+    }
+
+    45.3%, 65.3% {
+        transform: rotate(0deg) scale(200%,0%) translate(0%, 10%);
+        border-radius: 50% 50% 0px 0px;
+    }
+  }
+
+  .oeilG>.decu{
+    --oeiltriste:-20deg;
+    animation: yeuxpanche 40s ease-in-out infinite;
+  }
+
+  .oeilD>.decu{
+    --oeiltriste:20deg;
+    animation: yeuxpanche 40s ease-in-out infinite;
+  }
+
+  .oeilG>.mechant{
+    --oeiltriste:20deg;
+    animation: yeuxpanche 40s ease-in-out infinite;
+  }
+
+  .oeilD>.mechant{
+    --oeiltriste:-20deg;
+    animation: yeuxpanche 40s ease-in-out infinite;
+  }
+
+  @keyframes yeuxpanche {
+    0%, 22%, 22.5%, 45%, 45.5%,65%, 65.5%, 90%, 90.5%, 91% , 100% {
+        transform: rotate(var(--oeiltriste)) scale(200%,90%) translate(0%, 10%);
+        border-radius: 50% 50% 0px 0px;
+    }
+    22.3%, 45.3%, 65.3%, 90.3%, 90.7% {
+        transform: rotate(0deg) scale(200%,0%) translate(0%, 10%);
+        border-radius: 50% 50% 0px 0px;
+    }
+  }
+
 .moustache{
     position: absolute; /*w 85 et h 57*/
     height: 38dvw; /*23px*/
