@@ -4,6 +4,7 @@
     --Rouge: #D63030;
     --Violet: #FF00EAFF;
     --Orange: #FF8300FF;
+    --maintourne:;
   }
 
 body{
@@ -50,6 +51,13 @@ body{
     }
   }
 
+.voyagecontenu{
+    overflow: hidden;
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+}
 
 /********************labirinthe*****************************************/
 
@@ -109,8 +117,33 @@ body{
     margin: 0px auto 0px auto;
 }
 
-.animate-text{
-	visibility:hidden;
+.bullbleu{
+    background-color: #7bfff6c8;
+    backdrop-filter: blur(4px);
+    animation: bleu-visible 0.8s ease-in-out forwards;
+}
+
+@keyframes bleu-visible {
+    0%,60% {
+        border-radius: 100px;
+        transform: scale(0.4);
+        opacity: 0;
+    }
+
+    80% {
+        border-radius: 8px;
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
+.lienbleu{
+    backdrop-filter: blur(4px);
+    opacity: 0.8;
 }
 
 .enssemble_bull>img{
@@ -147,7 +180,7 @@ header{
     top: 0;
     left: 0;
     display: none;
-    z-index: 1;
+    z-index: 9;
     opacity: 0;
 }
 
@@ -224,6 +257,11 @@ footer{
     gap: 5dvw;
     height: fit-content;
     padding: 40px 0 40px 0;
+    z-index: 9;
+}
+
+.voyagecontenu>footer{
+    margin: auto auto 0px;
 }
 
 .bouton{
@@ -252,6 +290,10 @@ main{
     display: flex;
     flex-direction: column;
     gap: 2dvh;
+}
+
+.voyagecontenu>main{
+    margin: 20px auto auto;
 }
 
 .bouton:hover, button:hover{
@@ -328,7 +370,7 @@ main{
     transform: translate(40%);
 }
 
-.mainG, .mainD{
+.mainG, .mainD, .smallMontre{
     position: absolute;
     animation: mainflotte 1.5s ease-in-out infinite alternate;
     height: 20dvw; /*23px*/
@@ -350,12 +392,38 @@ main{
     animation: mainsalut 0.2s ease-in-out infinite alternate;
 }
 
+.smallMontre{
+    right: 30%; 
+    top:60%;
+
+    height: 50dvw !important; /*23px*/
+    width: 35dvw !important; /*17px*/
+    max-width: 250px;
+    max-height: 303px;
+}
+
+.unemain{
+    margin-right: -10%;
+}
+
+.donmontreG{
+    left: 30%;
+    top:80%;
+    --maintourne: rotate(-25deg);
+}
+
+.donmontreD{
+    right: 31%;
+    top:80%;
+    --maintourne: rotate(25deg);
+}
+
 @keyframes mainflotte {
     from {
-      transform: translate(0%,-5%);
+      transform: translate(0%,-5%) var(--maintourne);
     }
     to {
-        transform: translate(0%,0%);
+        transform: translate(0%,0%) var(--maintourne);
     }
   }
 
@@ -467,9 +535,60 @@ main{
     }
   }
 
+  .moustaches{
+    animation: parle2 8s ease-in-out infinite alternate;
+}
+
+  @keyframes parle2 {
+    0%, 4%, 8%,  12%, 14%, 20%, 24% , 26%, 30%, 32%, 38%, 42%, 46%, 50%, 64%, 68%, 72%, 74%, 78%, 100% {
+        transform: scale(100%,100%);
+    }
+    6%, 10%, 18%, 22%, 28%, 40%, 44%, 48%, 66%, 70%, 76% {
+        transform: translateY(11%) scale(100%,70%); 
+    }
+
+    13%, 31%, 47%, 73% {
+        transform:  translate(15%) scale(70%,100%);
+    }
+  }
 
 
+  .bras{
+    position: fixed;
+    transform: translate(-40%, 40%);
+    z-index: -1;
+    animation: regardmontre 0.6s ease-in-out forwards;
+  }
 
+  .bras>svg{
+    height: 100dvw;
+    max-height: 400px;
+  }
+
+  @keyframes regardmontre {
+    from {
+        transform: translate(-100%, 0%) rotate(-90deg);
+    }
+    to {
+        transform: translate(-40%, 40%);
+    }
+  }
+
+
+ /***********************************carte**********************************/
+
+ #map { 
+    height: 100dvh; 
+    width: 100dvw;
+    position: relative;
+    z-index: 7;
+}
+
+.infomap{
+    position: absolute;
+    z-index: 8;
+    right: 0px;
+}
 
 
 
@@ -497,5 +616,9 @@ main{
 
     .mainG, .mainD{
         bottom: -20%;
+    }
+
+    .donmontreG, .donmontreD{
+        top:70%;
     }
 }

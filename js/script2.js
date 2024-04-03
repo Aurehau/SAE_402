@@ -7,4 +7,3 @@ function afficheInfo(){
     document.querySelector(".pop-up>.croix").classList.toggle("turncroix");
 }
 
-
