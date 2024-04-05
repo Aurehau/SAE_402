@@ -14,9 +14,9 @@ var greenIcon = L.icon({
 
   iconSize:     [60, 70], // size of the icon
   shadowSize:   [50, 64], // size of the shadow
-  iconAnchor:   [16, 70], // point of the icon which will correspond to marker's location
-  shadowAnchor: [4, 62],  // the same for the shadow
-  popupAnchor:  [4, -70] // point from which the popup should open relative to the iconAnchor
+  iconAnchor:   [30, 65], // point of the icon which will correspond to marker's location
+  shadowAnchor: [5, 57],  // the same for the shadow
+  popupAnchor:  [0, -65] // point from which the popup should open relative to the iconAnchor
 });
 
 function onLocationFound(e) {
@@ -24,10 +24,20 @@ function onLocationFound(e) {
     console.log(e.longitude);
     console.log(e.latlng);
 
+
+    //L.marker([47.43472, 7.18058], {icon: greenIcon}).addTo(map);
     L.marker([e.latitude,e.longitude], {icon: greenIcon}).addTo(map)//;
 
     //L.marker(e.latlng).addTo(map)
-      .bindPopup("Vous êtes à " + e.latlng + " mètres de ce point").openPopup();
+      .bindPopup("<div class='ecriture'>Votre position</div>").openPopup();
+
+    // GPS
+    L.Routing.control({
+      waypoints: [
+        L.latLng(e.latlng),
+        L.latLng(47.744824, 7.337170)
+      ]
+    }).addTo(map);
   }
 
   function onLocationError(e) {
@@ -39,4 +49,4 @@ function onLocationFound(e) {
 
   map.locate({ setView: true, maxZoom: 16 });
 
-  L.marker([47.744824, 7.337170]).addTo(map).bindPopup("<div class='ecriture'>Parc Steinbach</div>").openPopup();
+  L.marker([47.744824, 7.337170], {icon: greenIcon}).addTo(map).bindPopup("<div class='ecriture'>Parc Steinbach</div>").openPopup();
