@@ -601,36 +601,57 @@ main{
 }
 
 .leaflet-routing-collapse-btn, .leaflet-control-zoom-in, .leaflet-control-zoom-out{
-    background-color: var(--Bleu);
-    min-height: 40px;
-    min-width: 40px;
+    background-color: var(--Bleu) !important;
+    max-height: 40px;
+    max-width: 40px;
     padding: 11px;
     border-radius: 20px !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.226), inset 0px -1px 5.8px #404040f9;
     border: none;
     margin: 20px 20px 20px auto;
     transition: 0.4s;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
 
-    visibility: visible;
+.leaflet-control-zoom-in{
+    padding: 5px;
+    margin: 0px 0px 4px 0px; 
+}
+
+.leaflet-control-zoom-out{
+    padding: 5px;
+    margin: 4px 0px 0px 0px; 
+}
+
+
+.leaflet-routing-container-hide> .leaflet-routing-collapse-btn{
+    padding: 8.5px 7px;
+    position: fixed !important;
+    right:10px !important;
+    left: auto !important;
+    top: 10px !important;
+}
+
+.leaflet-routing-collapse-btn{
+    padding: 3px 14px;
+    position: fixed !important;
+    right:10px !important;
+    left: auto !important;
+    top: 10px !important;
 }
 
 .leaflet-control{
-    /* visibility: visible; */
-    background-color: #0cb203;
-}
-
-.gps-existe{
-    /* visibility: hidden; */
-    background-color: #D63030;
+    border-radius: 30px;
+    background-color: #a8d7cf;
+    border: 2px #000000;
 }
 
 .leaflet-routing-collapse-btn{
     margin: 0px !important;
 }
 
-.leaflet-routing-collapse-btn::after{
-    
-}
 
 
 
