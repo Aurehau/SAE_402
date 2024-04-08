@@ -331,6 +331,12 @@ main{
     font-style: normal;
 }
 
+.code{
+    width: 70dvw;
+    max-width: fit-content !important;
+    margin: auto auto 100px;
+}
+
 
 
 /****************Personage*guide************************************************************************************/
@@ -598,6 +604,10 @@ main{
     z-index: 8;
     right: 40px;
     top: -9px;
+}
+
+.infolaby{
+    right: 0px;
 }
 
 .leaflet-routing-collapse-btn, .leaflet-control-zoom-in, .leaflet-control-zoom-out{

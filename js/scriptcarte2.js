@@ -25,17 +25,13 @@ function onLocationFound(e) {
     console.log(e.latlng);
 
 
-    //L.marker([47.43472, 7.18058], {icon: greenIcon}).addTo(map);
-    L.marker([e.latitude,e.longitude], {icon: greenIcon}).addTo(map)//;
-
-    //L.marker(e.latlng).addTo(map)
-      .bindPopup("<div class='ecriture'>Votre position</div>").openPopup();
+    //L.marker([e.latitude,e.longitude], {icon: greenIcon}).addTo(map).bindPopup("<div class='ecriture'>Votre position</div>").openPopup();
 
     // GPS
     L.Routing.control({
       waypoints: [
         L.latLng(e.latlng),
-        L.latLng(47.744824, 7.337170)
+        L.latLng(47.746732, 7.338999)
       ],
       createMarker: function(i, waypoint, n) {
         var marker = L.marker(waypoint.latLng, {
@@ -43,7 +39,11 @@ function onLocationFound(e) {
             icon: greenIcon // Utiliser la même icône personnalisée pour le départ et l'arrivée
         });
         return marker;
-    }
+      },
+      router: new L.Routing.osrmv1({
+        language: 'fr',
+        profile: 'foot' // Spécifiez le profil de marche
+      })
     }).addTo(map);
   }
 
@@ -56,4 +56,4 @@ function onLocationFound(e) {
 
   map.locate({ setView: true, maxZoom: 16 });
 
-  L.marker([47.744824, 7.337170], {icon: greenIcon}).addTo(map).bindPopup("<div class='ecriture'>Parc Steinbach</div>").openPopup();
+  //L.marker([47.746732, 7.338999], {icon: greenIcon}).addTo(map).bindPopup("<div class='ecriture'>Parc Steinbach</div>").openPopup();
