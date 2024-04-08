@@ -12,21 +12,21 @@
         <img src="../img/Union.svg" alt="">
     </button>
 
-    <a-scene>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        <a-sky color="#ECECEC"></a-sky>
+    <a-scene background="color: #000">
+        <a-assets>
+          <a-asset-item id="coffreModel" src="../3d/laby.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity gltf-model="#coffreModel" modify-materials></a-entity>
+        <a-entity camera="far: 9995.2" position="-0.315 0.595 -0.335" wasd-controls="" rotation="200 -128 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" visible=""></a-entity>
     </a-scene>
 
-    <div class="bull code">
+<!--     <div class="bull code">
         <form onsubmit="return verifierCode()">
             <label for="code">Entrez le code à 5 chiffres :</label><br>
             <input type="text" id="code" name="code" maxlength="5" pattern="\d{5}" title="Entrez un code à 5 chiffres" required><br><br>
             <input class="bouton" type="submit" value="Vérifier">
         </form> 
-    </div>
+    </div> -->
 
 
     <div class="pop-up pop-existe">
