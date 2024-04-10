@@ -143,7 +143,7 @@ window.addEventListener("resize",()=> {
   }
 
 function pagesuivante(){
-    document.location.href="../page.html";
+    document.location.href="../pages/coffre.html";
 }
 
 function bougerY(variableX,variableY,MouseVY){

@@ -12,12 +12,12 @@
         <img src="../img/Union.svg" alt="">
     </button>
 
-    <a-scene background="color: #000">
+    <a-scene background="color: #7BC1B5">
         <a-assets>
           <a-asset-item id="coffreModel" src="../3d/laby.gltf"></a-asset-item>
         </a-assets>
         <a-entity gltf-model="#coffreModel" modify-materials></a-entity>
-        <a-entity camera="far: 9995.2" position="-0.315 0.595 -0.335" wasd-controls="" rotation="200 -128 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" visible=""></a-entity>
+        <a-entity camera="far: 9995.2" position="-0.315 0.595 -0.335" rotation="0 -135 0" wasd-controls="" look-controls="" aframe-injected="" animation__move="property: position; from: 0 1.5 0; to: -0.315 0.595 -0.335; dur: 2000; autoplay: true" animation__rotate="property: rotation; from: -90 -135 -50; to: 0 -135 0; dur: 2000; autoplay: true" data-aframe-inspector-original-camera="" visible=""></a-entity>
     </a-scene>
 
 <!--     <div class="bull code">
@@ -29,11 +29,11 @@
     </div> -->
 
 
-    <div class="pop-up pop-existe">
+    <div class="pop-up">
         <button class="croix Binfo infomap turncroix infolaby" type="button">
             <img src="../img/croix.svg" alt="croix">
         </button>
-        <div class="bull pop-it">
+        <div class="bull ">
             <h1>Instruction</h1>
             <p>Il parait que la première indiennes (du tissue peint ou imprimé) produit par Koechlin Schmaltzer Dollfus & Cie est concervé dans un coffre fort dans l'hotel de ville de mulhouse. <br><br>Trouvé le coffre fort. <br><br>Bougé votre doigt ou votre souris pour déplacer le personnage.</p>
         </div>
