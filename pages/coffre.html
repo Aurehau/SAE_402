@@ -12,21 +12,22 @@
         <img src="../img/Union.svg" alt="">
     </button>
 
-    <a-scene background="color: #7BC1B5">
+    <a-scene background="color: #06171e">
         <a-assets>
           <a-asset-item id="coffreModel" src="../3d/laby.gltf"></a-asset-item>
         </a-assets>
-        <a-entity gltf-model="#coffreModel" modify-materials></a-entity>
-        <a-entity camera="far: 9995.2" position="-0.315 0.595 -0.335" rotation="0 -135 0" wasd-controls="" look-controls="" aframe-injected="" animation__move="property: position; from: 0 1.5 0; to: -0.315 0.595 -0.335; dur: 2000; autoplay: true" animation__rotate="property: rotation; from: -90 -135 -50; to: 0 -135 0; dur: 2000; autoplay: true" data-aframe-inspector-original-camera="" visible=""></a-entity>
+        <a-entity rotation="0 -226 0" gltf-model="#coffreModel" modify-materials></a-entity>
+        <a-entity camera="far: 9995.2" position="0 0.595 0.5" rotation="0 0 0" wasd-controls="" look-controls="" aframe-injected="" animation__move="property: position; from: 0.3 1.5 0.3; to: 0 0.595 0.5; dur: 2000; autoplay: true" animation__rotate="property: rotation; from: -90 0 -50; to: 0 0 0; dur: 2000; autoplay: true" data-aframe-inspector-original-camera="" visible=""></a-entity>
+        
     </a-scene>
 
-<!--     <div class="bull code">
+    <div class="code">
         <form onsubmit="return verifierCode()">
-            <label for="code">Entrez le code à 5 chiffres :</label><br>
-            <input type="text" id="code" name="code" maxlength="5" pattern="\d{5}" title="Entrez un code à 5 chiffres" required><br><br>
+            <label for="code">Entrez le code à 5 chiffres :</label>
+            <input type="text" id="code" name="code" maxlength="5" pattern="\d{5}" title="Entrez un code à 5 chiffres" required>
             <input class="bouton" type="submit" value="Vérifier">
         </form> 
-    </div> -->
+    </div>
 
 
     <div class="pop-up">
