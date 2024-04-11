@@ -4,7 +4,7 @@
     --Rouge: #D63030;
     --Violet: #FF00EAFF;
     --Orange: #FF8300FF;
-    --maintourne:;
+    /*--maintourne:;*/
   }
 
 body{
@@ -280,6 +280,7 @@ footer{
     margin: auto;
     transition: 0.4s;
 }
+
 
 .reverse{
     transform: scale(-1);
