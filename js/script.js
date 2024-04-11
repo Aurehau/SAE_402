@@ -621,6 +621,7 @@ function bougerX(variableX,variableY,MouseVX){
         }
 }
 
+//zoom sur coffre
 function InPieceCoffre(Xpresent,Ypresent){
     if((Xpresent<=186)&&(Ypresent<=186)){
         document.querySelector(".plateau_jeu>img").style.transform=`translateX(900px) translateY(650px) scale(2)`;

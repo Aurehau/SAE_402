@@ -334,7 +334,9 @@ main{
 .code{
     width: 70dvw;
     max-width: fit-content !important;
-    margin: auto auto 100px;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%);
     animation: codevisible 3s ease-in-out forwards;
 
     background-color:#000000d9;
@@ -347,12 +349,25 @@ main{
     font-weight: weight;
     font-style: normal;
     z-index: 9;
+    position: fixed;
     color:var(--Blanc);
+    transition: 0.4s;
+}
+
+.code:focus-within:not(:focus-within label) {
+    top: 20%;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .code>form{
     display: flex;
     flex-direction: column;
+}
+
+.code .bouton{
+    height: fit-content;
 }
 
 @keyframes codevisible {
