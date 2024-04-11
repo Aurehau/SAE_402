@@ -713,9 +713,29 @@ main{
     margin: 0px !important;
 }
 
+/*********************************** récompence *******************************************/
 
+.fondRecomp{
+    height: 20dvw;
+    width: 20dvw;
+    display: grid;
+    margin: auto;
+}
 
+.illumine{
+    grid-area: 1/1 ;
+    height: 60%;
+    width: 60%;
+    background-color: #484747;
+    box-shadow: 0px 4px 4px rgba(228, 177, 9, 0.226);
+    margin: auto;
+}
 
+.fondRecomp>img{
+    grid-area: 1/1 ;
+    height: 100%;
+    width: 100%;
+}
 
 
 
