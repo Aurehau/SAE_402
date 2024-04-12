@@ -193,3 +193,6 @@ function grabEnd(event) { // fonction appelée lorsque le clic ou le toucher est
     caseDeposee = null; // Réinitialiser la case déposée
     event.preventDefault(); // Empêcher le comportement par défaut du navigateur
 }
+
+
+// https://github.com/SebL68/Scodoc_Notes/blob/main/html/absences/index.php rechercher sliderStart
