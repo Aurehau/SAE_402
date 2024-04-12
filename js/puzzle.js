@@ -46,7 +46,7 @@ function melangerPuzzle() {
     for (let l = 0; l < lignes; l++) {
         for (let c = 0; c < colonnes; c++) {
             let caseJeu = document.getElementById(l + "-" + c);
-            caseJeu.src = "../imagesPuzzle/" + casesDesordre.shift() + ".jpg";
+            caseJeu.src = "..imagesPuzzle/" + casesDesordre.shift() + ".jpg";
         }
     }
 }
