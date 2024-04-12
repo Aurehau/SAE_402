@@ -726,21 +726,56 @@ main{
     max-height: 265px;
     min-width: 200px;
     min-height: 200px;
+    animation: pop-it 0.4s ease-in forwards; 
 }
 
 .illumine{
     grid-area: 1/1 ;
     height: 60%;
     width: 60%;
-    background-color: #484747;
-    box-shadow: 0px 4px 40px rgba(228, 177, 9, 0.226);
+    background-color:  rgba(255, 229, 144, 0.226);
+    box-shadow: 0px 0px 100px 100px rgba(255, 229, 144, 0.226);
     margin: auto;
+    border-radius: 50%;
+    animation: lumineux 2s ease-in-out alternate infinite;
+    z-index: 0;
 }
+
+@keyframes lumineux {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1.2);
+    }
+  }
 
 .fondRecomp>img{
     grid-area: 1/1 ;
     height: 100%;
     width: 100%;
+    z-index: 3;
+    animation: mainflotte 1.5s ease-in-out infinite alternate;
+    --maintourne: rotate(0deg);
+}
+
+
+
+h1{
+    font-family: "Roboto Mono", monospace;
+    text-shadow: 0px 4px 20px rgba(255, 0, 0, 0.226);
+    color: #343739;
+    text-align: center;
+    border: 3mm ridge var(--Rouge) ;
+    background-color: var(--Blanc);
+    padding: 10px;
+    margin:0px auto 50px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.226), inset 0px -1px 5.8px #404040f9;
+}
+
+h1>span{
+    font-size: 20px;
 }
 
 
