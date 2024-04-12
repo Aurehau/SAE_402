@@ -445,6 +445,7 @@ main{
     max-width: 86px;
     max-height: 203px;
     bottom: -10%;
+    --maintourne: rotate(0deg);
 }
 
 .mainG{
@@ -717,10 +718,14 @@ main{
 /*********************************** récompence *******************************************/
 
 .fondRecomp{
-    height: 20dvw;
-    width: 20dvw;
+    height: 30dvw;
+    width: 30dvw;
     display: grid;
     margin: auto;
+    max-width: 265px;
+    max-height: 265px;
+    min-width: 200px;
+    min-height: 200px;
 }
 
 .illumine{
@@ -728,7 +733,7 @@ main{
     height: 60%;
     width: 60%;
     background-color: #484747;
-    box-shadow: 0px 4px 4px rgba(228, 177, 9, 0.226);
+    box-shadow: 0px 4px 40px rgba(228, 177, 9, 0.226);
     margin: auto;
 }
 
