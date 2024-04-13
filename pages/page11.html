@@ -6,7 +6,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        .bullbleu{
+            background-color: #7bfff6c8;
+            backdrop-filter: blur(4px);
+            animation: bleu-visible 0.8s ease-in-out forwards;
+        }
 
+        @keyframes bleu-visible {
+            0%,60% {
+                border-radius: 100px;
+                transform: scale(0.4);
+                opacity: 0;
+            }
+
+            80% {
+                border-radius: 8px;
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="../styles/style.css">
     <title>SAE 402</title>
 </head>
