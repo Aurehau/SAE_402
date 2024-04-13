@@ -204,6 +204,10 @@ header{
     opacity: 0;
 }
 
+.ligne{
+    line-height: 2;
+}
+
 .pop-it{
     animation: pop-it 0.5s ease-in-out forwards;
 }
@@ -373,6 +377,7 @@ main{
 .code>form{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .code .bouton{
