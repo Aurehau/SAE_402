@@ -428,6 +428,7 @@ main{
     margin: -47% 50%;
     transform: translate(-50%);
     overflow: hidden;
+    align-items: center;
 }
 
 .pupille{
