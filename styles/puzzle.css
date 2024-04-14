@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.226), inset 0px -1px 5.8px #404040f9;
-    /* transform: scale(0.5); à utiliser pour le responsive*/
+     transform: scale(0.8);  /*à utiliser pour le responsive*/
 }
 
 #jeu img {
@@ -25,4 +25,11 @@ body {
 .boutonPuzzle{
     height: fit-content;
     margin:auto;
+}
+
+
+@media screen and (min-width: 500px) {
+    #jeu {
+         transform: scale(1); /* à utiliser pour le responsive*/
+    }
 }
