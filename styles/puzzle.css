@@ -33,3 +33,22 @@ body {
          transform: scale(1); /* à utiliser pour le responsive*/
     }
 }
+
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    width: 300px;
+    height: 300px;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: 300px 300px;
+    background-image: url('imagesPuzzle/1.jpg'); /* Change to the appropriate image */
+}
+
+#shuffle-btn {
+    margin-top: 20px;
+}
