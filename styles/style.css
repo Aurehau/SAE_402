@@ -453,7 +453,7 @@ main{
     transform: translate(40%);
 }
 
-.mainG, .mainD, .smallMontre{
+.mainG, .mainD, .smallMontre, .BeerCoin{
     position: absolute;
     animation: mainflotte 1.5s ease-in-out infinite alternate;
     height: 20dvw; /*23px*/
@@ -839,6 +839,24 @@ main{
 
 .bullsombre>h1{
     text-align: center;
+}
+
+.rose{
+    background-color: #ff00e1;
+}
+
+.orange{
+    background-color: #ff7b00;
+}
+
+.BeerCoin{
+    right: 37%; 
+    top:80%;
+
+    height: 25dvw !important; /*23px*/
+    width: 25dvw !important; /*17px*/
+    max-width: 150px;
+    max-height: 150px;
 }
 
 
