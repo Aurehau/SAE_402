@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../styles/style.css">
     <title>SAE 402</title>
 </head>
 <body>
     <header>
-    </header>
-    <main class="maincarte">
-
-        <div id="map"></div>
-        <button class="Binfo infomap" type="button">
+        <button class="Binfo" type="button">
             <img src="../img/Union.svg" alt="">
         </button>
-<!--         <div class="enssemble_bull">
+    </header>
+    <main>
+
+        <div class="enssemble_bull">
             <div class="bull">
-                Une fois arrivé à la bonne époque vous trouverez un GPS sur votre montre pour vous indiquer ou trouver l'objet. <br><br>Vous êtes près ?
+                Vous voilà de retour dans le présant !!  <br><br>Pour vous remercier de m'avoir ramener ces objets, je vous propose de choisir entre ces 2 proposition !
             </div>
             <img src="../img/lienbull2.svg" alt="triangle bull de texte">
-        </div> -->
+        </div>
 
         <div class="guide">
             <!-- taille original width 285 et height 188 -->
-            <!-- <svg viewBox="0 0 285 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 285 188" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_di_119_9)">
                     <path d="M95.5107 24.5C97.5107 32.1 102.677 34 105.011 34C160 34 162.5 157.5 98.5107 146C93.344 144.667 78.2107 141.5 59.0107 139.5C39.8107 137.5 33.344 128.667 32.5107 124.5C34.344 125.833 39.1107 128.5 43.5107 128.5C49.0107 128.5 87.0107 115 47.0107 114C15.0107 113.2 7.67737 88.3333 8.0107 76C8.17737 78.1667 10.5107 84 18.5107 90C28.5107 97.5 76.0107 89.5 47.0107 82.5C23.8107 76.9 20.6774 59.1667 22.0107 51C23.844 55.1667 29.6107 64 38.0107 66C48.5107 68.5 57.5107 55.5 53.5107 54.5C49.5107 53.5 36.0107 43 38.0107 31.5C39.6107 22.3 38.6774 16.6667 38.0107 15C40.1774 15.5 44.3107 17.8 43.5107 23C41.5107 42.5 77.0107 45 70.5107 40C64.0107 35 67.5107 21.5 67.5107 15C67.5107 10.0433 65.9963 8.63018 65.1329 8.5088C65.0916 8.50544 65.0508 8.50251 65.0107 8.5C65.0497 8.5 65.0905 8.50285 65.1329 8.5088C67.8367 8.72895 73.0107 10.8023 73.0107 17.5C73.0107 26 87.0107 39 91.0107 29.5C94.2107 21.9 89.6774 14.3333 87.0107 11.5C89.0107 12.6667 93.5107 16.9 95.5107 24.5Z" fill="url(#paint0_linear_119_9)"/>
                     <path d="M182.011 24C180.011 31.6 174.844 33.5 172.511 33.5C110.5 39.5 130 158.5 179.011 145.5C184.177 144.167 199.311 141 218.511 139C237.711 137 244.177 128.167 245.011 124C243.177 125.333 238.411 128 234.011 128C228.511 128 190.511 114.5 230.511 113.5C262.511 112.7 269.844 87.8333 269.511 75.5C269.344 77.6667 267.011 83.5 259.011 89.5C249.011 97 201.511 89 230.511 82C253.711 76.4 256.844 58.6667 255.511 50.5C253.677 54.6667 247.911 63.5 239.511 65.5C229.011 68 220.011 55 224.011 54C228.011 53 241.511 42.5 239.511 31C237.911 21.8 238.844 16.1667 239.511 14.5C237.344 15 233.211 17.3 234.011 22.5C236.011 42 200.511 44.5 207.011 39.5C213.511 34.5 210.011 21 210.011 14.5C210.011 9.54328 211.525 8.13018 212.389 8.0088C212.43 8.00544 212.471 8.00251 212.511 8C212.472 8 212.431 8.00285 212.389 8.0088C209.685 8.22895 204.511 10.3023 204.511 17C204.511 25.5 190.511 38.5 186.511 29C183.311 21.4 187.844 13.8333 190.511 11C188.511 12.1667 184.011 16.4 182.011 24Z" fill="url(#paint2_linear_119_9)"/>
@@ -121,30 +119,26 @@
             <img class="moustache" src="../img/Moustache.svg" alt="moustache">
 
             <img class="mainG" src="../img/main.svg" alt="main">
-            <img class="mainD" src="../img/main.svg" alt="main"> -->
+            <img class="mainD" src="../img/main.svg" alt="main">
         </div>
 
-        <div class="pop-up pop-existe">
-            <button class="croix Binfo infomap turncroix" type="button">
+        <div class="pop-up">
+            <button class="croix Binfo" type="button">
                 <img src="../img/croix.svg" alt="croix">
             </button>
-            <div class="bull pop-it">
+            <div class="bull">
                 <h1>Instruction</h1>
-                <p>Vous êtes arrivé en 1746. <br><br> Mulhouse est connu pour avoir été une grande ville industriel, notament dans le domaine du tissue.<br><br> 1746 est la date de création de la première manufacture d'indiennes, Koechlin Schmaltzer Dollfus & Cie. <br>Elle a été créée par trois jeunes Mulhousiens : Koechlin (27 ans), Schmaltzer (25 ans) et Jean-Henri Dollfus père (22 ans). <br><br>Rendez vous à la Place de la réunion en suivant le GPS.</p>
+                <p>Voici les instructions qui permettent au joueur d'être sûr de ce qu'il faut faire.</p>
             </div>
         </div>
 
 
     </main>
     <footer>
-        <a href="../pages/labyrhinte.html" class="bouton"><div>Arrivé</div></a>
+        <a href="fin1.html" class="bouton"><img class="reverse" src="../img/flèche.svg" alt="flèche"><div>Retour</div></a>
+        <a href="fin2.html" class="bouton"><div>Suivant</div><img src="../img/flèche.svg" alt="flèche"></a>
     </footer>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
-    <!-- <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
- -->
     <script src="../js/script2.js"></script>
-    <script src="../js/scriptcarte2.js"></script>
     
 </body>
 </html>
