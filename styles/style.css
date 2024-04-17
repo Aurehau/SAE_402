@@ -447,7 +447,7 @@ main{
     width: 100%;
     background-color: black;
     animation: yeuxcligne 40s ease-in-out infinite;
-
+    margin-right: -10px;
 }
 
 .oeilG{
