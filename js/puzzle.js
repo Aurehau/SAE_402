@@ -132,7 +132,7 @@ function dragEnd() { // cliquer déposer terminé
         caseDeposee.src = imgActuelle;
 
         if (gagne()) { // message gain si le puzzle est dans l'ordre
-            alert("Félicitations ! Vous avez résolu le puzzle !");
+            alert("Félicitations ! Vous avez résolu le puzzle !"); /****** Renvoyer à la page suivant ******/
         }
         
     }

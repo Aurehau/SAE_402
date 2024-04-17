@@ -29,7 +29,7 @@ function onLocationFound(e) {
     L.marker([e.latitude,e.longitude], {icon: greenIcon}).addTo(map)//;
 
     //L.marker(e.latlng).addTo(map)
-      .bindPopup("<div class='ecriture'>Votre position</div>").openPopup();
+      .bindPopup("<div class='ecriture'>Your position</div>").openPopup();
 
     // GPS
     L.Routing.control({

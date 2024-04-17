@@ -892,3 +892,96 @@ main{
         top:70%;
     }
 }
+
+/*************************** Formulaire vérification musée des beaux arts ***************************/
+
+
+.error-message {
+    color: red;
+    animation: shake 0.5s ease-in-out;
+}
+
+.success-message {
+    color: green;
+    animation: bounceIn 0.5s ease-in-out;
+}
+
+#destinationForm>input{
+    margin-top:10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#destinationForm:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+#destinationForm>a{
+    margin-top:10px;
+}
+
+#destinationForm>a>button{
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#tableauForm>input{
+    margin-top:10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#tableauForm:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+#tableauForm>a{
+    margin-top:10px;
+}
+
+#tableauForm>a>button{
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/**************************************************************************************************/

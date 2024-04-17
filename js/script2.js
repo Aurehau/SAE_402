@@ -1,3 +1,4 @@
+
 document.querySelector(".Binfo").addEventListener("click",afficheInfo);
 document.querySelector(".croix").addEventListener("click",afficheInfo);
 
