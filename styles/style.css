@@ -445,7 +445,7 @@ main{
 .pupille{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(236, 149, 149);
     animation: yeuxcligne 40s ease-in-out infinite;
     margin-right: -10px;
 }
