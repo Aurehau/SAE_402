@@ -17,11 +17,11 @@ function verifierCode() {
             document.location.href="../pages/recompense2.html";
         } else {
             document.getElementById("code").value="";
-            alert("Le code n'est pas bon !");
+            alert("The code is not good!");
         }
         
     } else {
-        alert("Le code doit contenir exactement 5 chiffres.");
+        alert("The code must contain exactly 5 digits.");
     }
     // Empêcher le formulaire de se soumettre
     return false;
