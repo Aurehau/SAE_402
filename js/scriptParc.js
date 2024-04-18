@@ -6,7 +6,7 @@ document.getElementById("destinationForm").addEventListener("submit", function(e
     var correctAnswer = "musée des beaux arts"; // Réponse correcte
 
     if (userInput === correctAnswer) {
-        document.getElementById("result").innerHTML = "Bravo ! Direction le musée des beaux-arts !";
+        document.getElementById("result").innerHTML = "Congratulations! Head for the 'Musée des Beaux-Arts!'";
         document.getElementById("result").classList.add("success-message"); 
         setTimeout(function() {
             document.getElementById("result").classList.remove("success-message"); 
@@ -18,7 +18,7 @@ document.getElementById("destinationForm").addEventListener("submit", function(e
             }, 2000); // Attendre 2 secondes avant de rediriger
         }, 500);
     } else {
-        document.getElementById("result").innerHTML = "Désolé, mauvaise réponse. Veuillez réessayer.";
+        document.getElementById("result").innerHTML = "Sorry, wrong answer. Please try again.";
         document.getElementById("result").classList.add("error-message"); 
         setTimeout(function() {
             document.getElementById("result").classList.remove("error-message"); 

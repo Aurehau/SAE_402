@@ -6,7 +6,7 @@ document.getElementById("tableauForm").addEventListener("submit", function(event
     var correctAnswer = "1920"; // Date correcte du tableau
 
     if (userInput === correctAnswer) {
-        document.getElementById("result").innerHTML = "Bravo ! Vous avez trouvé le bon tableau !";
+        document.getElementById("result").innerHTML = "Congratulations! You found the right painting!";
         document.getElementById("result").classList.add("success-message"); 
         setTimeout(function() {
             document.getElementById("result").classList.remove("success-message"); 
@@ -18,7 +18,7 @@ document.getElementById("tableauForm").addEventListener("submit", function(event
             }, 2000); // Attendre 2 secondes avant de rediriger
         }, 500);
     } else {
-        document.getElementById("result").innerHTML = "Désolé, mauvaise date. Veuillez réessayer.";
+        document.getElementById("result").innerHTML = "Sorry, wrong date. Please try again.";
         document.getElementById("result").classList.add("error-message"); 
         setTimeout(function() {
             document.getElementById("result").classList.remove("error-message"); 

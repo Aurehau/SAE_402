@@ -56,4 +56,4 @@ function onLocationFound(e) {
 
   map.locate({ setView: true, maxZoom: 16 });
 
-  L.marker([47.744824, 7.337170], {icon: greenIcon}).addTo(map).bindPopup("<div class='ecriture'>Parc Steinbach</div>").openPopup();
+  L.marker([47.744824, 7.337170], {icon: greenIcon}).addTo(map).bindPopup("<div class='ecriture'>Steinbach Park</div>").openPopup();
