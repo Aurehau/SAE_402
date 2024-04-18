@@ -34,7 +34,7 @@ document.getElementById("tableauForm").addEventListener("submit", function(event
             confetti();
             // Redirection vers la page de récompense après un court délai
             setTimeout(function() {
-                window.location.href = "recompense.html";
+                window.location.href = "recompense1.html";
             }, 2000); // Attendre 2 secondes avant de rediriger
         }, 500);
     } else {
