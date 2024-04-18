@@ -3,9 +3,9 @@
 document.getElementById("destinationForm").addEventListener("submit", function(event) {
     event.preventDefault();
     var userInput = document.getElementById("destination").value.toLowerCase(); 
-    var correctAnswer = "musée des beaux arts"; // Réponse correcte
-
-    if (userInput === correctAnswer) {
+    var correctAnswers = ["musée des beaux arts", "musée des beaux-arts", "musee des beaux arts", "musee des beaux-arts", "beaux arts", "beaux-arts", "bo zar", "musee des bo zar", "musée des bo zar", "musée des bo-zar", "musee des bo-zar"]; // Différentes réponses correctes
+    
+    if (correctAnswers.includes(userInput)) { // Vérifie si la réponse de l'utilisateur est dans la liste des réponses correctes
         document.getElementById("result").innerHTML = "Congratulations! Head for the 'Musée des Beaux-Arts!'";
         document.getElementById("result").classList.add("success-message"); 
         setTimeout(function() {
