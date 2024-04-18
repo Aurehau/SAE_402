@@ -152,7 +152,7 @@ function dragEnd() { // cliquer déposer terminé
 /***************************************** Animation confetti *******************************************/
 
 function confetti() {
-    var confettiCount = 400; // Nombre de confettis à lancer
+    var confettiCount = 300; // Nombre de confettis à lancer
     var confettiContainer = document.createElement('div');
     confettiContainer.classList.add('confetti-container');
     document.body.appendChild(confettiContainer); 
