@@ -981,4 +981,20 @@ main{
     100% { transform: scale(1); opacity: 1; }
 }
 
-/**************************************************************************************************/
+/***************************************************** Fonction confetti *****************************************************/
+
+.confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ff6347; /* Couleur rouge vif */
+    border-radius: 50%; /* Forme de cercle */
+    opacity: 0.9;
+    animation: confettiFall 3s ease-out infinite; /* Animation de chute plus rapide */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour ajouter de la profondeur */
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(720deg); } /* Rotation supplémentaire */
+}

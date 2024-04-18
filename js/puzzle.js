@@ -6,9 +6,11 @@ let caseDeposee; // case dans laquelle on dépose
 
 const puzzleOrdre = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]; // Tableau du puzzle dans l'ordre
 let casesDesordre = ["1", "2", "6", "4", "5", "3", "7", "8", "9"];  // Tableau des carreaux dans le désordre
-const puzzleMelange = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]; // Tableau du puzzle dans l'ordre
+const puzzleMelange = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]; // Tableau du puzzle dans l'ordre (que l'on va mélanger et comparer au tableau puzzleOrdre)
 
-window.onload = () => { // fonction quand la page est chargée
+/************************* quand la page est chargée : *************************/
+
+window.onload = () => {
     for (let l = 0; l < lignes; l++) {
         for (let c = 0; c < colonnes; c++) {
 
@@ -18,7 +20,7 @@ window.onload = () => { // fonction quand la page est chargée
 
             // gestion d'événement pour le cliquer déposer
 
-            caseJeu.addEventListener("dragstart", dragStart); //mousedown mouseup touchdown 
+            caseJeu.addEventListener("dragstart", dragStart);
             caseJeu.addEventListener("dragover", dragOver);
             caseJeu.addEventListener("drop", dragDrop);
             caseJeu.addEventListener("dragend", dragEnd);
@@ -35,9 +37,11 @@ window.onload = () => { // fonction quand la page est chargée
     // Sélectionner le bouton "Mélanger le puzzle"
     const boutonMelanger = document.querySelector(".boutonPuzzle");
 
-    // Ajouter un gestionnaire d'événements au clic sur le bouton
+    // Ajouter un gestionnaire d'événements au clic sur ce bouton
     boutonMelanger.addEventListener("click", melangerPuzzle);
 }
+
+/************************* fonction pour mélanger le puzzle au clic sur le bouton *************************/
 
 function melangerPuzzle() {
     // Mélanger l'ordre du puzzle
@@ -55,7 +59,9 @@ function melangerPuzzle() {
     }
 }
 
-function positionsActuellesCases() { // Récupère les positions actuelles des cases dans un tableau
+/************************* récupère les positions actuelles des cases dans un tableau *************************/
+
+function positionsActuellesCases() { 
 
     const positionsActuelles = [];
     for (let l = 0; l < lignes; l++) {
@@ -68,6 +74,7 @@ function positionsActuellesCases() { // Récupère les positions actuelles des c
     return positionsActuelles; // retourne tableau des positions des cases
 }
 
+/************************* fonction de victoire, vérifie si le tableau est dans l'ordre *************************/
 
 function gagne() {
     for (let l = 0; l < lignes; l++) {
@@ -82,6 +89,7 @@ function gagne() {
     return true; // Si toutes les cases sont bien placées, retourne true
 }
 
+/************************* Gestion des cliquer déposer *************************/
 
 function dragStart() { // selection du cliquer déposer
     caseSelectionnee = this;
@@ -131,9 +139,37 @@ function dragEnd() { // cliquer déposer terminé
         caseSelectionnee.src = autreImg;
         caseDeposee.src = imgActuelle;
 
-        if (gagne()) { // message gain si le puzzle est dans l'ordre
-            alert("Félicitations ! Vous avez résolu le puzzle !"); /****** Renvoyer à la page suivant ******/
-        }
-        
+        if (gagne()) { // Vérifie si le puzzle est dans l'ordre
+            confetti(); // Lance l'animation de confettis
+            setTimeout(function() {
+                window.location.href = "page14.html"; // Redirige vers la page14.html
+            }, 2000); // Attendre 2 secondes avant de rediriger
+        }        
     }
 }
+
+
+/***************************************** Animation confetti *******************************************/
+
+function confetti() {
+    var confettiCount = 400; // Nombre de confettis à lancer
+    var confettiContainer = document.createElement('div');
+    confettiContainer.classList.add('confetti-container');
+    document.body.appendChild(confettiContainer); 
+
+    // Lancé de confettis
+    for (var i = 0; i < confettiCount; i++) {
+        var confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + '%'; 
+        confetti.style.animationDelay = Math.random() * 3 + 's'; 
+        confettiContainer.appendChild(confetti); 
+    }
+
+    // Supression conteneur après l'animation
+    setTimeout(function() {
+        document.body.removeChild(confettiContainer);
+    }, 3000);
+}
+
+/*************************************************************************************************************************************************/
