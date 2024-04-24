@@ -3,7 +3,7 @@
 document.getElementById("tableauForm").addEventListener("submit", function(event) {
     event.preventDefault();
     var userInput = document.getElementById("date").value; 
-    var correctAnswer = "1920"; // Date correcte du tableau
+    var correctAnswer = "1871"; // Date correcte du tableau
 
     if (userInput === correctAnswer) {
         document.getElementById("result").innerHTML = "Congratulations! You found the right painting!";
