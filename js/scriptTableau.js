@@ -61,12 +61,13 @@ function confetti() {
         confetti.classList.add('confetti');
         confetti.style.left = Math.random() * 100 + '%';
         confetti.style.top = Math.random() * -100 + 'vh'; // Position initiale aléatoire en haut de l'écran
-        confetti.style.animationDelay = Math.random() + 's';
+        confetti.style.animationDelay = Math.random() * 0.3 + 's'; // Réduit le délai de départ
+        confetti.style.animationDuration = '1s'; // Durée fixe de l'animation
         confettiContainer.appendChild(confetti);
     }
 
-    // Suppression conteneur après l'animation
+    // Suppression conteneur après un court délai
     setTimeout(function () {
         document.body.removeChild(confettiContainer);
-    }, 3000);
+    }, 1500); // Délai avant la suppression des confettis
 }
