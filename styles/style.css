@@ -16,6 +16,15 @@ body{
     min-height: 100dvh;
 }
 
+.bodyLabyrinthe{
+    margin: 0;
+    overflow: hidden;
+    background:radial-gradient(var(--Bleu), #0b2f35da);
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
 .noir{
     background:radial-gradient(var(--Bleu), #020a0bda);
 }
