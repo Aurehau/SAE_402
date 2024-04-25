@@ -9,7 +9,7 @@
 
 body{
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     background:radial-gradient(var(--Bleu), #0b2f35da);
     display: flex;
     flex-direction: column;
