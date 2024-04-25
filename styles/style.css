@@ -56,7 +56,7 @@ body{
   }
 
 .voyagecontenu{
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100dvh;
     width: 100dvw;
     display: flex;
