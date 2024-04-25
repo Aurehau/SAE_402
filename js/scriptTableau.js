@@ -50,7 +50,7 @@ document.getElementById("tableauForm").addEventListener("submit", function(event
 // }
 
 function confetti() {
-    var confettiCount = 400; // Nombre de confettis à lancer
+    var confettiCount = 300; 
     var confettiContainer = document.createElement('div');
     confettiContainer.classList.add('confetti-container');
     document.body.appendChild(confettiContainer);
@@ -60,9 +60,9 @@ function confetti() {
         var confetti = document.createElement('div');
         confetti.classList.add('confetti');
         confetti.style.left = Math.random() * 100 + '%';
-        confetti.style.top = Math.random() * -100 + 'vh'; // Position initiale aléatoire en haut de l'écran
-        confetti.style.animationDelay = Math.random() * 0.3 + 's'; // Réduit le délai de départ
-        confetti.style.animationDuration = '1s'; // Durée fixe de l'animation
+        confetti.style.top = Math.random() * -100 + 'vh'; 
+        confetti.style.animationDelay = Math.random() * 0.3 + 's'; 
+        confetti.style.animationDuration = '1s';
         confettiContainer.appendChild(confetti);
     }
 

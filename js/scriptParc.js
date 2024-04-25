@@ -28,25 +28,48 @@ document.getElementById("destinationForm").addEventListener("submit", function(e
 
 /***************************************** Animation confetti *******************************************/
 
+// function confetti() {
+//     var confettiCount = 400; // Nombre de confettis à lancer
+//     var confettiContainer = document.createElement('div');
+//     confettiContainer.classList.add('confetti-container');
+//     document.body.appendChild(confettiContainer); 
+
+//     // Lancé de confettis
+//     for (var i = 0; i < confettiCount; i++) {
+//         var confetti = document.createElement('div');
+//         confetti.classList.add('confetti');
+//         confetti.style.left = Math.random() * 100 + '%'; 
+//         confetti.style.animationDelay = Math.random() * 3 + 's'; 
+//         confettiContainer.appendChild(confetti); 
+//     }
+
+//     // Supression conteneur après l'animation
+//     setTimeout(function() {
+//         document.body.removeChild(confettiContainer);
+//     }, 3000);
+// }
+
 function confetti() {
-    var confettiCount = 400; // Nombre de confettis à lancer
+    var confettiCount = 300; 
     var confettiContainer = document.createElement('div');
     confettiContainer.classList.add('confetti-container');
-    document.body.appendChild(confettiContainer); 
+    document.body.appendChild(confettiContainer);
 
     // Lancé de confettis
     for (var i = 0; i < confettiCount; i++) {
         var confetti = document.createElement('div');
         confetti.classList.add('confetti');
-        confetti.style.left = Math.random() * 100 + '%'; 
-        confetti.style.animationDelay = Math.random() * 3 + 's'; 
-        confettiContainer.appendChild(confetti); 
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.top = Math.random() * -100 + 'vh'; 
+        confetti.style.animationDelay = Math.random() * 0.3 + 's'; 
+        confetti.style.animationDuration = '1s';
+        confettiContainer.appendChild(confetti);
     }
 
-    // Supression conteneur après l'animation
-    setTimeout(function() {
+    // Suppression conteneur après un court délai
+    setTimeout(function () {
         document.body.removeChild(confettiContainer);
-    }, 3000);
+    }, 1500); // Délai avant la suppression des confettis
 }
 
 /*************************************************************************************************************************************************/
