@@ -3,7 +3,7 @@
 document.getElementById("destinationForm").addEventListener("submit", function(event) {
     event.preventDefault();
     var userInput = document.getElementById("destination").value.toLowerCase(); 
-    var correctAnswers = ["musée des beaux arts", "musée des beaux-arts", "musee des beaux arts", "musee des beaux-arts", "beaux arts", "beaux-arts", "bo zar", "musee des bo zar", "musée des bo zar", "musée des bo-zar", "musee des bo-zar", "museum beaux-arts", "Museum beaux-arts","museum beaux arts", "Museum beaux arts",]; // Différentes réponses correctes
+    var correctAnswers = ["musée des beaux arts", "musée des beaux arts ", "musée des beaux-arts", "musée des beaux-arts ", "musee des beaux arts", "musee des beaux arts ", "musee des beaux-arts", "beaux arts", "beaux-arts", "bo zar", "musee des bo zar", "musée des bo zar", "musée des bo-zar", "musee des bo-zar", "museum beaux-arts", "Museum beaux-arts","museum beaux arts", "Museum beaux arts",]; // Différentes réponses correctes
     
     if (correctAnswers.includes(userInput)) { // Vérifie si la réponse de l'utilisateur est dans la liste des réponses correctes
         document.getElementById("result").innerHTML = "Congratulations! Head for the 'Musée des Beaux-Arts!'";
