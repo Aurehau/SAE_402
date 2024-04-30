@@ -1039,3 +1039,22 @@ main{
         opacity: 1; /* Fin de l'animation : confetti visible */
     }
 }
+
+
+.ifbug{
+    display: none;
+}
+
+.ifbugvisible{
+    animation: bugvisible 0.6s ease-out forwards;
+}
+
+@keyframes bugvisible {
+    0% {
+        display: block;
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
+    }
+}

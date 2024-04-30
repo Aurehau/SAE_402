@@ -73,6 +73,7 @@ window.addEventListener("resize",()=> {
         if((Xpresent<=186)&&(Ypresent<=186)){
             document.querySelector(".plateau_jeu>img").style.transform=`translateX(900px) translateY(650px) scale(2)`;
             document.querySelector(".plateau_jeu>.corp>img").style.transform=`translateX(100px) translateY(100px) scale(2)`;
+            document.querySelector(".ifbug").classList.add("bugvisible");
             setTimeout(pagesuivante, 800);
             
         }else{
