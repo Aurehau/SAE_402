@@ -126,7 +126,7 @@ body{
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    z-index: 9;
+    z-index: 8;
     margin: 0px auto 0px auto;
 }
 
@@ -252,6 +252,7 @@ header{
     top: 0%;
     transform: rotate(45deg);
     animation: croix-pop 0.5s ease-in-out forwards;
+    z-index: 9;
 }
 
 @keyframes croix-pop {
