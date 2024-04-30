@@ -3,7 +3,7 @@
 document.getElementById("destinationForm").addEventListener("submit", function(event) {
     event.preventDefault();
     var userInput = document.getElementById("destination").value.toLowerCase(); 
-    var correctAnswers = ["musée des beaux arts", "musée des beaux-arts", "musee des beaux arts", "musee des beaux-arts", "beaux arts", "beaux-arts", "bo zar", "musee des bo zar", "musée des bo zar", "musée des bo-zar", "musee des bo-zar"]; // Différentes réponses correctes
+    var correctAnswers = ["musée des beaux arts", "musée des beaux-arts", "musee des beaux arts", "musee des beaux-arts", "beaux arts", "beaux-arts", "bo zar", "musee des bo zar", "musée des bo zar", "musée des bo-zar", "musee des bo-zar", "museum beaux-arts", "Museum beaux-arts","museum beaux arts", "Museum beaux arts",]; // Différentes réponses correctes
     
     if (correctAnswers.includes(userInput)) { // Vérifie si la réponse de l'utilisateur est dans la liste des réponses correctes
         document.getElementById("result").innerHTML = "Congratulations! Head for the 'Musée des Beaux-Arts!'";
@@ -28,26 +28,6 @@ document.getElementById("destinationForm").addEventListener("submit", function(e
 
 /***************************************** Animation confetti *******************************************/
 
-// function confetti() {
-//     var confettiCount = 400; // Nombre de confettis à lancer
-//     var confettiContainer = document.createElement('div');
-//     confettiContainer.classList.add('confetti-container');
-//     document.body.appendChild(confettiContainer); 
-
-//     // Lancé de confettis
-//     for (var i = 0; i < confettiCount; i++) {
-//         var confetti = document.createElement('div');
-//         confetti.classList.add('confetti');
-//         confetti.style.left = Math.random() * 100 + '%'; 
-//         confetti.style.animationDelay = Math.random() * 3 + 's'; 
-//         confettiContainer.appendChild(confetti); 
-//     }
-
-//     // Supression conteneur après l'animation
-//     setTimeout(function() {
-//         document.body.removeChild(confettiContainer);
-//     }, 3000);
-// }
 
 function confetti() {
     var confettiCount = 300; 
