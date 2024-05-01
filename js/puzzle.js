@@ -5,7 +5,7 @@ let caseSelectionnee; // case selectionnée pour déplacement
 let caseDeposee; // case dans laquelle on dépose
 
 const puzzleOrdre = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]; // Tableau du puzzle dans l'ordre
-let casesDesordre = ["1", "2", "6", "4", "5", "3", "7", "8", "9"];  // Tableau des carreaux dans le désordre
+let casesDesordre = ["1", "7", "6", "3", "2", "9", "4", "8", "5"];  // Tableau des carreaux dans le désordre
 const puzzleMelange = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]; // Tableau du puzzle dans l'ordre (que l'on va mélanger et comparer au tableau puzzleOrdre)
 
 /************************* quand la page est chargée : *************************/
