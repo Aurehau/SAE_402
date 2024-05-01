@@ -1047,7 +1047,7 @@ main{
 }
 
 .ifbugvisible{
-    animation: bugvisible 0.6s ease-out forwards;
+    animation: bugvisible 0.3s ease-out forwards;
 }
 
 @keyframes bugvisible {
