@@ -1047,10 +1047,11 @@ main{
 }
 
 .ifbugvisible{
-    animation: bugvisible 0.3s ease-out forwards;
+    /* animation: bugvisible 0.3s ease-out forwards; */
+    display: block;
 }
 
-@keyframes bugvisible {
+/* @keyframes bugvisible {
     0% {
         display: block;
         opacity: 0; 
@@ -1058,4 +1059,4 @@ main{
     100% {
         opacity: 1; 
     }
-}
+} */
